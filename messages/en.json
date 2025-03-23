@@ -1,0 +1,101 @@
+{
+    "person": {
+        "role": "AI enthusiest, Competitor, and Builder"
+    },
+    "newsletter": {
+        "title": "Subscribe to Qendrim's Newsletter",
+        "description": "I write about technology, my journey into tech, and share insights from my experience in CS.",
+        "button": "Sign up"
+    },
+    "home": {
+        "label": "Home",
+        "title": "Qendrim's Portfolio",
+        "description": "Portfolio website showcasing my work as a AI enthusiest, Competitor, and Builder",
+        "headline": "AI enthusiest, Competitor, and Builder",
+        "subline": "Hi! I'm Qendrim, a 2nd Year Computer Science student at the University of Alberta. I'm passionate about AI, competitive programming, and building cool stuff. I've worked on projects like a sign language detection software, an AI team formation algorithm, and a personal website. I'm also a competitive programmer and have won hackathons and case competitions. I'm currently looking for internships and opportunities to learn and grow. Let's connect!",
+        "cta-primary": "Work With Me",
+        "cta-secondary": "See My Work",
+        "intro": "I give my all, learn from my losses, and love winning."
+    },
+    "about": {
+        "label": "About",
+        "title": "About me",
+        "description": "Meet Qendrim, AI enthusiest, Competitor, and Builder from Canada",
+        "intro": {
+            "title": "Introduction",
+            "description": "Qendirm is a citizen of Canada with 5 years of experience in programming. He is passionate about creating innovative products, winning competitions, and making a difference in tech."
+        },
+        "work": {
+            "title": "Work Experience",
+            "experiences": {
+                "Index Competitive": {
+                    "timeframe": "2025 - Present",
+                    "role": "Founder/President",
+                    "achievements": "Leading a high-performance student team by building systems for competitive success across tech, business, and design challenges."
+                }
+            }
+        },
+        "studies": {
+            "title": "Studies",
+            "institutions": {
+                "University Education": {
+                    "description": "Studied computer science and engineering and gained expertise in building scalable systems."
+                },
+                "Self-Learning": {
+                    "description": "Continuously learning through courses, mentorship, and hands-on experience in product development and leadership."
+                }
+            }
+        },
+        "technical": {
+            "title": "Technical Skills",
+            "skills": {
+                "PyTorch": {
+                "description": "Experienced in building and training deep learning models for classification, prediction, and generation tasks."
+                },
+                "TensorFlow": {
+                "description": "Proficient in implementing scalable neural networks and deploying models in production environments."
+                },
+                "Scikit-learn": {
+                "description": "Used extensively for traditional ML tasks including classification, regression, clustering, and model evaluation."
+                },
+                "Pandas & NumPy": {
+                "description": "Skilled in efficient data manipulation, preprocessing pipelines, and numerical computing for ML workflows."
+                },
+                "Algorithm Design": {
+                "description": "Strong foundation in building custom algorithms for optimization, team formation, and decision-making systems."
+                },
+                "Automation & Scripting": {
+                "description": "Developed systems to automate workflows, simulate outcomes, and streamline data-driven processes."
+                }         
+            }
+        }
+    },
+    "blog": {
+        "label": "Blog",
+        "title": "Writing about technology and the journey into tech",
+        "description": "Read what Qendrim has been up to recently"
+    },
+    "work": {
+        "label": "Past Work",
+        "title": "My projects",
+        "description": "Tech and product projects by Qendrim"
+    },
+    "testimonials": {
+        "label": "Testimonials",
+        "title": "Testimonials",
+        "description": "Read what other people have to share about working with Qendrim"
+    },
+    "gallery": {
+        "label": "Gallery",
+        "title": "My photo gallery",
+        "description": "A photo collection by Qendrim"
+    },
+    "contact": {
+        "label": "Contact",
+        "title": "Contact Qendrim",
+        "description": "Get in touch with Qendrim"
+    },
+    "projectCard": {
+        "label": "Read Case Study"
+    }
+}
