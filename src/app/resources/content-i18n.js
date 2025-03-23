@@ -2,14 +2,14 @@ import { InlineCode } from "@/once-ui/components";
 
 const createI18nContent = (t) => {
     const person = {
-        firstName: 'Aashni',
-        lastName: 'Shah',
+        firstName: 'Qendrim',
+        lastName: 'Beka',
         get name() {
             return `${this.firstName} ${this.lastName}`;
         },
         role: t("person.role"),
         avatar: '/images/avatar.jpg',
-        location: 'Kenya & Canada',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+        location: 'Canada',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
         languages: ['English']  // optional: Leave the array empty if you don't want to display languages
     }
 
@@ -25,22 +25,17 @@ const createI18nContent = (t) => {
         {
             name: 'GitHub',
             icon: 'github',
-            link: 'https://github.com/aashnisshah',
+            link: 'https://github.com/qbeka',
         },
         {
             name: 'LinkedIn',
             icon: 'linkedin',
-            link: 'https://www.linkedin.com/in/aashnisshah',
-        },
-        {
-            name: 'X',
-            icon: 'x',
-            link: 'https://www.x.com/aashnisshah',
+            link: 'https://www.linkedin.com/in/qendrimbeka/',
         },
         {
             name: 'Email',
             icon: 'email',
-            link: 'mailto:contact@aashni.me',
+            link: 'mailto:beka.qendrim1@gmail.com',
         },
     ]
 
@@ -65,7 +60,7 @@ const createI18nContent = (t) => {
         },
         calendar: {
             display: true,
-            link: 'https://calendly.com/aashnisshah/web'
+            link: 'https://calendly.com/beka-qendrim1'
         },
         intro: {
             display: true,
@@ -104,8 +99,8 @@ const createI18nContent = (t) => {
             title: 'Studies',
             institutions: [
                 {
-                    name: 'University of Jakarta',
-                    description: <>{t(`about.studies.institutions.University of Jakarta.description`)}</>,
+                    name: 'University of Alberta',
+                    description: <>{t(`about.studies.institutions.University of Alberta.description`)}</>,
                 },
                 {
                     name: 'Build the Future',
@@ -185,19 +180,11 @@ const createI18nContent = (t) => {
                 ctaMessage: "Lets Build Together"
             },
             {
-                title: "Advisory & Board Roles",
-                description:
-                    "With experience scaling teams and modernizing operations, I bring strategic value to boards and advisory teams.",
-                iconName: "compass",
-                ctaMessage: "Lets Talk Strategy"
-            },
-            {
-                title: "Speaking & Workshops",
-                description:
-                    "I share insights on scaling startups, driving innovation, and building impactful products through talks and interactive sessions.",
-                iconName: "microphone",
-                ctaMessage: "Invite Me to Your Event"
-            },
+                title: "Hackathon Competitor",
+                description: "I actively compete in university hackathons, building fast, functional prototypes with small teams under pressure.",
+                iconName: "code",
+                ctaMessage: "See My Projects"
+            }
         ]
     };
 

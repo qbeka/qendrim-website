@@ -1,14 +1,14 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-    firstName: 'Aashni',
-    lastName: 'Shah',
+    firstName: 'Qendrim',
+    lastName: 'Beka',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role: 'Tech Leader, Mentor, and Builder',
+    role: 'AI enthusiest, Competitor, and Builder',
     avatar: '/images/avatar.jpg',
-    location: 'Kenya & Canada',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+    location: 'Canada',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
     languages: ['English']  // optional: Leave the array empty if you don't want to display languages
 }
 
@@ -24,22 +24,17 @@ const social = [
     {
         name: 'GitHub',
         icon: 'github',
-        link: 'https://github.com/aashnisshah',
+        link: 'https://github.com/qbeka',
     },
     {
         name: 'LinkedIn',
         icon: 'linkedin',
-        link: 'https://www.linkedin.com/in/aashnisshah',
-    },
-    {
-        name: 'X',
-        icon: 'x',
-        link: 'https://www.x.com/aashnisshah',
+        link: 'https://www.linkedin.com/in/qendrimbeka/',
     },
     {
         name: 'Email',
         icon: 'email',
-        link: 'mailto:contact@aashni.me',
+        link: 'mailto:beka.qendrim1@gmail.com',
     },
 ]
 
@@ -64,12 +59,12 @@ const about = {
     },
     calendar: {
         display: true,
-        link: 'https://calendly.com/aashnisshah/web'
+        link: 'https://calendly.com/beka-qendrim1'
     },
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Aashni is a tech innovator and startup strategist who excels at building impactful products and solutions.With a background spanning software engineering, entrepreneurship, and advisory roles, Aashni combines technical expertise with a passion for simplifying complex challenges through innovative strategies and scalable solutions.</>
+        description: <>Qendrim is a citizen of Canada with 5 years of experience in programming. He is passionate about creating innovative products, winning competitions, and making a difference in tech.</>
     },
     work: {
         display: true, // set to false to hide this section
@@ -83,71 +78,7 @@ const about = {
                     <>Launched an AI-powered audio journaling app to track and amplify positive moments throughout the day.</>,
                 ],
                 images: [],
-            },
-            {
-                company: "Innovative Tech Labs",
-                timeframe: "2023 - Present",
-                role: "Director",
-                achievements: [
-                    <>Directed the development of software and technology solutions for a portfolio of companies spanning hospitality, automotive, entertainment, import/export, and retail sectors.</>,
-                    <>Led a cross-functional team in designing and implementing key systems, including loyalty programs, CRM platforms, website overhauls, and internal applications, resulting in enhanced operational efficiency and customer engagement.</>,
-                ],
-                images: [],
-            },
-            {
-                company: "Consulting",
-                timeframe: "2023 - Present",
-                role: "Consultant",
-                achievements: [
-                    <>Worked with multiple startups to explore and build 0-to-1 products, identifying business models, user needs, and technical solutions.</>,
-                    <>Developed products using tools like React and Next.js, as well as no-code platforms such as Bubble, Webflow, and WordPress.</>,
-                    <>Helped startups save over $50k through efficient setup, implementation, and prototyping support.</>,
-                ],
-                images: [],
-            },
-            {
-                company: "Square (Cash App)",
-                timeframe: "2018 - 2019",
-                role: "Software Development Engineer",
-                achievements: [
-                    <>Led development of SEO features, reducing scammer success rates by 95% through improved content management.</>,
-                    <>Converted the Support Engineering team to Agile processes, reducing ticket resolution times from 3 weeks to 1 week.</>,
-                    <>Orchestrated a multi-platform CMS migration, decreasing content update times by 70% and ensuring seamless international launches.</>,
-                ],
-                images: [],
-            },
-            {
-                company: "Elixir Labs",
-                timeframe: "2016 - 2020",
-                role: "Chief Executive Officer and Product Manager",
-                achievements: [
-                    <>Developed a product vision with nonprofit partners, leading to the launch of 2 global projects and active development of 3 more.</>,
-                    <>Managed cross-functional teams of product managers, designers, and developers using tools like Trello, Figma, and Slack.</>,
-                    <>Prioritized developer-friendly technology and maintainable solutions for each project, streamlining ongoing operations.</>,
-                ],
-                images: [],
-            },
-            {
-                company: "Microsoft",
-                timeframe: "2016 - 2017",
-                role: "Software Development Engineer",
-                achievements: [
-                    <>Enhanced monitoring capabilities for Microsoft Azure’s internal DNS service, enabling faster issue resolution for Tier 0 services.</>,
-                    <>Led tenant migrations with zero downtime during cluster decommissioning projects, maintaining uninterrupted service for customers.</>,
-                    <>Conducted stress testing to optimize resource usage, improving system efficiency for critical Azure services.</>,
-                ],
-                images: [],
-            },
-            {
-                company: "Amazon",
-                timeframe: "Summer 2014",
-                role: "Software Engineering Intern",
-                achievements: [
-                    <>Collaborated with the Kindle team to support the launch of the Kindle Unlimited product.</>,
-                    <>Developed a system to integrate digital and physical product management, allowing customers to bundle Kindle Unlimited subscriptions with Kindle e-reader purchases.</>,
-                ],
-                images: [],
-            },
+            }
         ]
 
     },
@@ -156,16 +87,8 @@ const about = {
         title: 'Studies',
         institutions: [
             {
-                name: 'University of Toronto',
+                name: 'University of Alberta',
                 description: <>Bachelors in Computer Science.</>,
-            },
-            {
-                name: 'Quantic MBA',
-                description: <>MBA</>,
-            },
-            {
-                name: 'International School of Kenya',
-                description: <>IB Program for High School</>,
             }
         ]
     },
@@ -273,19 +196,11 @@ const offerings = {
             ctaMessage: "Lets Build Together"
         },
         {
-            title: "Advisory & Board Roles",
-            description:
-                "With experience scaling teams and modernizing operations, I bring strategic value to boards and advisory teams.",
-            iconName: "compass",
-            ctaMessage: "Lets Talk Strategy"
-        },
-        {
-            title: "Speaking & Workshops",
-            description:
-                "I share insights on scaling startups, driving innovation, and building impactful products through talks and interactive sessions.",
-            iconName: "microphone",
-            ctaMessage: "Invite Me to Your Event"
-        },
+            title: "Hackathon Competitor",
+            description: "I actively compete in university hackathons, building fast, functional prototypes with small teams under pressure.",
+            iconName: "code",
+            ctaMessage: "See My Projects"
+        }
     ]
 };
 
