@@ -70,6 +70,7 @@ export const iconLibrary: Record<string, IconType> = {
 	clipboard: HiClipboard,
 	speechBubble: HiChatBubbleBottomCenterText,
 	rocket: PiRocketLaunchDuotone,
+	rocket1: PiRocketLaunchDuotone,
 	compass: PiCompassDuotone,
 	microphone: PiMicrophoneStageDuotone
 };

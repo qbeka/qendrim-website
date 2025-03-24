@@ -9,7 +9,7 @@ const person = {
     role: 'AI enthusiest, Competitor, and Builder',
     avatar: '/images/avatar.jpg',
     location: 'Canada',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English']  // optional: Leave the array empty if you don't want to display languages
+    languages: ['English', 'German', 'Albanian']  // optional: Leave the array empty if you don't want to display languages
 }
 
 const newsletter = {
@@ -64,18 +64,18 @@ const about = {
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Qendrim is a citizen of Canada with 5 years of experience in programming. He is passionate about creating innovative products, winning competitions, and making a difference in tech.</>
+        description: <>Qendrim is a Canadian citizen with 5 years of experience in programming. He is passionate about building his engineering skills through personal projects, and winning competitions.</>
     },
     work: {
         display: true, // set to false to hide this section
         title: 'Work Experience',
         experiences: [
             {
-                company: "HypeDocs",
-                timeframe: "2022 - Present",
-                role: "Founder, CEO",
+                company: "Index Competitive",
+                timeframe: "2025 - Present",
+                role: "Founder, President",
                 achievements: [
-                    <>Launched an AI-powered audio journaling app to track and amplify positive moments throughout the day.</>,
+                    <>Leading a high-performance student team by building systems for competitive success across tech, business, and design challenges.</>,
                 ],
                 images: [],
             }
@@ -88,7 +88,7 @@ const about = {
         institutions: [
             {
                 name: 'University of Alberta',
-                description: <>Bachelors in Computer Science.</>,
+                description: <>Bachelor of Science, Major in Computer Science.</>,
             }
         ]
     },
@@ -145,7 +145,8 @@ const about = {
                   <>Tableau</>,
                   <>Git & GitHub</>,
                   <>VS Code</>,
-                  <>LaTeX</>
+                  <>LaTeX</>,
+                  <>Bash</>
                 ],
                 images: []
               }
@@ -192,13 +193,13 @@ const offerings = {
             title: "Consulting & Freelance",
             description:
                 "I partner with startups, small businesses, and nonprofits to build impactful strategies, products, and tech solutions.",
-            iconName: "rocket",
+            iconName: "microphone",
             ctaMessage: "Lets Build Together"
         },
         {
             title: "Hackathon Competitor",
-            description: "I actively compete in university hackathons, building fast, functional prototypes with small teams under pressure.",
-            iconName: "code",
+            description: "I compete in hackathons, building fast, functional prototypes with small teams under pressure.",
+            iconName: "rocket1",
             ctaMessage: "Lets Compete Together"
         }
     ]

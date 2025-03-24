@@ -182,7 +182,7 @@ const createI18nContent = (t) => {
             {
                 title: "Hackathon Competitor",
                 description: "I actively compete in university hackathons, building fast, functional prototypes with small teams under pressure.",
-                iconName: "microphone",
+                iconName: "rocket1",
                 ctaMessage: "See My Projects"
             }
         ]
