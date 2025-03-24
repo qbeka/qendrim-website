@@ -129,27 +129,27 @@ const about = {
             {
                 title: 'Technical Skills',
                 description: [
-                    <>Javascript - ReactJS, React Native, NextJS, NodeJS</>,
-                    <>Java</>,
-                    <>Kotlin</>,
-                    <>PHP</>,
-                    <>and more</>
+                  <>Python – pandas, NumPy, scikit-learn, OpenCV</>,
+                  <>Machine Learning & AI – model training, evaluation, deployment</>,
+                  <>Computer Vision – object detection, image processing</>,
+                  <>R – data analysis, visualization</>,
+                  <>Excel – modeling, cleaning, dashboards</>
                 ],
                 images: []
-            },
-            {
-                title: 'No-Code Technical Skills',
+              },
+              {
+                title: 'Other Tools & Platforms',
                 description: [
-                    <>Bubble</>,
-                    <>Webflow</>,
-                    <>Wordpress</>,
-                    <>Shopify</>,
-                    <>Zapier</>,
-                    <>Make</>,
-                    <>and more</>
+                  <>Jupyter Notebooks</>,
+                  <>Google Colab</>,
+                  <>Tableau</>,
+                  <>Git & GitHub</>,
+                  <>VS Code</>,
+                  <>LaTeX</>
                 ],
                 images: []
-            }
+              }
+              
         ]
     }
 }
@@ -180,8 +180,8 @@ const testimonials = {
 
 const contact = {
     label: "Contact",
-    title: "Contact Aashni",
-    description: `Get in touch with Aashni, or follow her on other social platforms`
+    title: "Contact Qendrim",
+    description: `Get in touch with Qendrim, or follow her on other social platforms`
     // Create new testimonials posts by adding a new .mdx file to app/testimonials/testimonials
     // All posts will be listed on the /testimonials route
 }
