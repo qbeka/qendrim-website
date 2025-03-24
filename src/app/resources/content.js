@@ -42,8 +42,8 @@ const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Tech Leader, Advisor, and Builder</>,
-    subline: <>Hi! I'm Aashni, a startup advisor and innovation leader, helping businesses scale and build impactful solutions.</>
+    headline: <>AI enthusiest, Competitor, and Builder</>,
+    subline: <>Hi! I'm Qendrim, a 2nd Year Computer Science student at the University of Alberta. I'm passionate about AI, competitive programming, and building cool stuff. I've worked on projects like a sign language detection software, an AI team formation algorithm, and a personal website. I'm also a competitive programmer and have won hackathons and case competitions. I'm currently looking for internships and opportunities to learn and grow. Let's connect!</>
 }
 
 const about = {
@@ -199,7 +199,7 @@ const offerings = {
             title: "Hackathon Competitor",
             description: "I actively compete in university hackathons, building fast, functional prototypes with small teams under pressure.",
             iconName: "code",
-            ctaMessage: "See My Projects"
+            ctaMessage: "Lets Compete Together"
         }
     ]
 };

@@ -66,7 +66,7 @@ export default function Offerings({ offeringsList }: PostProps) {
                             </Text>
                             <Button
                                 variant="primary"
-                                href={`https://calendly.com/aashnisshah/web`}
+                                href={`https://calendly.com/beka-qendrim1`}
                                 size="m"
                             >
                                 {offer.ctaMessage}
