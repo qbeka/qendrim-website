@@ -30,8 +30,7 @@ import {
 	PiImageDuotone,
 	PiRocketLaunchDuotone,
 	PiCompassDuotone,
-	PiMicrophoneStageDuotone,
-	PiBriefcaseDuotone
+	PiMicrophoneStageDuotone
 } from "react-icons/pi";
 
 import {
@@ -72,6 +71,5 @@ export const iconLibrary: Record<string, IconType> = {
 	speechBubble: HiChatBubbleBottomCenterText,
 	rocket: PiRocketLaunchDuotone,
 	compass: PiCompassDuotone,
-	microphone: PiMicrophoneStageDuotone,
-	briefcase: PiBriefcaseDuotone
+	microphone: PiMicrophoneStageDuotone
 };
