@@ -1,0 +1,39 @@
+---
+title: "Gmail Code Autofill Chrome Extension"
+publishedAt: "2025-03-31"
+summary: "A privacy-focused Chrome extension that reads Gmail verification codes and autofills website forms with local-only processing."
+images:
+  - "/images/projects/gmail-autofill.jpg"
+team:
+  - name: "Qendrim Beka"
+    role: "Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/qendrimbeka/"
+---
+
+## Overview
+
+Gmail Code Autofill is a Chrome extension that reads numerical verification codes from your Gmail inbox and fills them into web forms automatically. It uses Gmail's API in read-only mode and handles everything locally—nothing is stored, logged, or sent externally.
+
+## Key Features
+
+- **Autofill Verification Codes** from Gmail into matching form fields
+- **Manual Override UI** via popup
+- **No Data Storage or Transmission** for maximum privacy
+- **Built-in Test Page** for fast debugging
+
+## Tech Stack
+
+JavaScript (ESModules), Gmail API, Chrome Extension APIs (Manifest V3)
+
+## Security
+
+- OAuth-based Gmail access (readonly)
+- No external servers, tracking, or analytics
+- Local-only parsing and injection
+
+## Download
+
+[GitHub Repository](https://github.com/qbeka/Code_Autofill_Extension)
+
+[Chrome Web Store](https://chrome.google.com/webstore/detail/your-extension-id-here) --> will replace when extension goes live..
