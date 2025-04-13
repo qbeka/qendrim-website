@@ -14,7 +14,9 @@ interface PostProps {
 
 export default function Offerings({ offeringsList }: PostProps) {
     return (
-        <Flex>
+        <Flex
+            style={{ position: 'relative', overflow: 'hidden', borderRadius: '16px' }}
+        >
             <Background
                 position="absolute"
                 mask={mailchimp.effects.mask as any}
@@ -30,6 +32,7 @@ export default function Offerings({ offeringsList }: PostProps) {
                 gap="xl"
                 border="neutral-medium"
                 borderStyle="solid-1"
+                style={{ borderRadius: '16px' }}
             >
                 <Heading as="h2" variant="display-strong-xs" wrap="balance">
                     Work With Me
