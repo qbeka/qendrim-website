@@ -1,5 +1,6 @@
 import "@/once-ui/styles/index.scss";
 import "@/once-ui/tokens/index.scss";
+import { Analytics } from "@vercel/analytics/react";
 
 import classNames from 'classnames';
 
@@ -114,6 +115,7 @@ export default async function RootLayout({
 						gradient={effects.gradient as any}
 						dots={effects.dots as any}
 						lines={effects.lines as any}/>
+					<Analytics />
 					<Flex
 						fillWidth
 						minHeight="16">
