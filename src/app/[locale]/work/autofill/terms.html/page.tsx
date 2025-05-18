@@ -125,7 +125,7 @@ export default function TermsOfService({ params }: { params: { locale: string } 
           <Text>
             Qendrim Beka<br />
             Email: qendrim@ualberta.ca<br />
-            Website: <a href="https://www.qendrimbeka.com" target="_blank" rel="noopener noreferrer">https://www.qendrimbeka.com</a>
+            Website: <a href="https://www.qendrimbeka.com">https://www.qendrimbeka.com</a>
           </Text>
         </Flex>
       </Flex>
