@@ -105,7 +105,7 @@ export default function TermsOfService({ params }: { params: { locale: string } 
 
         <Flex direction="column" gap="s">
           <Heading variant="heading-strong-m">9. Privacy</Heading>
-          <Text>Your use of the Gmail Code Autofill Extension is also governed by our <a href="/work/autofill/privacy.html">Privacy Policy</a>, which outlines our data practices regarding information collected and processed by the Extension.</Text>
+          <Text>Your use of the Gmail Code Autofill Extension is also governed by our <a href="/work/autofill/privacy">Privacy Policy</a>, which outlines our data practices regarding information collected and processed by the Extension.</Text>
         </Flex>
 
         <Flex direction="column" gap="s">
