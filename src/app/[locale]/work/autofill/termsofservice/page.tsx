@@ -132,4 +132,3 @@ export default function TermsOfService({ params }: { params: { locale: string } 
     </Flex>
   );
 } 
-} 
