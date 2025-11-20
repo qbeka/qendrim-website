@@ -27,16 +27,16 @@ export default function Hero() {
           <div className="flex justify-center">
             <div className={`relative ${theme === '8bit' ? 'bit-8' : ''}`}>
               <div
-                className={`rounded overflow-hidden border-4 ${
+                className={`rounded-full overflow-hidden border-4 ${
                   theme === '8bit' ? 'border-amber bit-8-border' : 'border-burgundy/30'
-                } shadow-lg`}
+                } shadow-lg w-[400px] h-[400px]`}
               >
                 <Image
-                  src={theme === '8bit' ? '/8bitheadshot.png' : '/headshot.jpg'}
+                  src={theme === '8bit' ? '/8bitheadshot-circular.png' : '/headshot-circular.png'}
                   alt="Qendrim Beka"
                   width={400}
                   height={400}
-                  className="w-full h-auto"
+                  className="w-full h-full object-cover"
                   priority
                 />
               </div>
