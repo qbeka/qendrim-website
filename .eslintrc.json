@@ -1,4 +1,5 @@
 {
-  "extends": "next/core-web-vitals",
-  "ignorePatterns": ["_preserved/**", "_backup/**"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "ignorePatterns": ["_preserved/**", "_backup/**"],
+  "rules": {}
 }
