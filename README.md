@@ -1,82 +1,125 @@
-# **Build your portfolio with Once UI's Magic Portfolio**
+# Qendrim Beka - Terminal Portfolio
 
-Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
+A unique terminal-based portfolio with dual viewing modes and interactive commands.
 
-**1. Clone the repository**
-```
-git clone https://github.com/once-ui-system/magic-portfolio.git
-```
+## 🚀 Features
 
-**2. Install dependencies**
-```
+- **💻 Terminal Mode**: Navigate portfolio using terminal commands
+- **🎨 Portfolio Mode**: Traditional portfolio view with 8-bit theme toggle
+- **📄 Resume Viewer**: Built-in PDF viewer with fullscreen mode
+- **⌨️ Command History**: Arrow keys to navigate previous commands
+- **📂 Detail Views**: Nano/Vim-style editors for in-depth content
+- **🔄 Dual Modes**: Switch between terminal and regular portfolio anytime
+
+## 🎮 Getting Started
+
+```bash
 npm install
-```
-
-**3. Run dev server**
-```
 npm run dev
 ```
 
-**4. Edit config**
+Open [http://localhost:3000](http://localhost:3000)
+
+## 📟 Terminal Commands
+
+### General
+- `!help` - Show all available commands
+- `!clear` - Clear the terminal
+- `!portfolio` - Switch to regular portfolio view
+- `!about` - About Qendrim
+- `!resume` - View resume (with fullscreen option)
+
+### Navigation
+- `!experience` - List all work experience
+- `!experience/[id]` - View specific experience details
+- `!education` - View education details
+- `!skills` - List all technical skills
+- `!projects` - List all projects
+- `!projects/[id]` - View project details in editor
+- `!involvement` - List leadership activities
+- `!involvement/[id]` - View involvement details
+- `!contact` - Get contact information
+- `!socials` - Social media links
+
+### Resume Controls
+- `f` - Toggle fullscreen mode
+- `q` or `Esc` - Close resume viewer
+
+### Tips
+- Use ↑/↓ arrow keys to navigate command history
+- Press `q` or `Esc` to close detail views
+- All commands start with `!`
+
+## 🎨 Portfolio Mode
+
+In portfolio mode, you get:
+- Modern parchment aesthetic design
+- 8-bit theme toggle (gamepad button)
+- Smooth section navigation
+- All sections on one scrollable page
+- Terminal mode button to switch back
+
+## 📁 Project Structure
+
 ```
-src/app/resources/config
+src/
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+├── components/
+│   ├── Terminal.tsx           # Terminal UI & command processor
+│   ├── PortfolioView.tsx      # Regular portfolio wrapper
+│   ├── Navigation.tsx         # Portfolio mode navigation
+│   ├── Hero.tsx              # About section
+│   ├── ExperienceSection.tsx # Work & Education
+│   ├── Projects.tsx          # Projects showcase
+│   ├── Involvement.tsx       # Leadership activities
+│   ├── Testimonials.tsx      # Recommendations
+│   └── Contact.tsx           # Contact form
+├── contexts/
+│   ├── ViewModeContext.tsx   # Terminal/Portfolio switcher
+│   └── ThemeContext.tsx      # 8-bit theme toggle
+└── lib/
+    └── terminalData.ts       # All content & data
 ```
 
-**5. Edit content**
-```
-src/app/resources/content (or content-i18n for localization)
-```
+## 📊 Projects Included
 
-**6. Create blog posts / projects**
-```
-Add a new .mdx file to src/app/[locale]/blog/posts or src/app/[locale]/work/projects
-```
+1. **Philo - A Thinking Journal** (25K+ users, $24K ARR)
+2. **NeuroNavScore** (🏆 1st Place natHACKS 2024)
+3. **Gmail Code Autofill Extension**
+4. **ASL Hand Sign Recognition**
+5. **US Election Voting Simulation**
+6. **ML Rock Paper Scissors**
+7. **Matrix Calculator Study Tool**
 
-# **Features**
+## 💼 Experience Highlights
 
-## **Once UI**
-- All tokens, components & features of [Once UI](https://once-ui.com)
+- **Philo** - Founder (Oct 2025 - Present)
+- **NAT** - Research & Development Intern (May 2025 - Present)
+- **Government of Alberta** - Data Analyst (Summer 2025)
+- **Index Competitive** - Founder/President (Mar 2025 - Present)
 
-## **SEO**
-- Automatic open-graph and X image generation with next/og
-- Automatic schema and metadata generation based on the content file
+## 🛠️ Tech Stack
 
-## **Design**
-- Responsive layout optimized for all screen sizes
-- Timeless design without heavy animations and motion
-- Endless customization options through [data attributes](https://once-ui.com/docs/theming)
+- Next.js 14
+- React 18
+- TypeScript
+- Tailwind CSS
+- Axios (for contact form integration)
 
-## **Content**
-- Render sections conditionally based on the content file
-- Enable or disable pages for blog, work, gallery and about / CV
-- Generate and display social links automatically
-- Set up password protection for URLs
+## 📬 Contact
 
-## **Localization (NEW)**
-- Magic Portfolio now supports localization with the next-intl library
-- See more info in resources/config.js
+- **Email**: beka.qendrim1@gmail.com
+- **GitHub**: [github.com/qbeka](https://github.com/qbeka)
+- **LinkedIn**: [linkedin.com/in/qendrimbeka](https://www.linkedin.com/in/qendrimbeka/)
+- **Calendly**: [calendly.com/beka-qendrim1](https://calendly.com/beka-qendrim1)
 
-# **Authors**
+## 🎓 About
 
-Connect with us on Threads or LinkedIn.
+Qendrim Beka is a 3rd Year Computing Science student at the University of Alberta (Minor in Philosophy) with First Class Academic Standing. He's a competitor and builder passionate about creating impactful products.
 
-Lorant Toth: [Threads](https://www.threads.net/@lorant.one), [LinkedIn](https://www.linkedin.com/in/tothlorant/)  
-Zsofia Komaromi: [Threads](https://www.threads.net/@zsofia_kom), [LinkedIn](https://www.linkedin.com/in/zsofiakomaromi/)
+---
 
-Localization added by [François Hernandez](https://github.com/francoishernandez)
-
-# **Get involved**
-
-- Join the [Design Engineers Club on Discord](https://discord.com/invite/5EyAQ4eNdS) and share your portfolio with us!
-- Report a [bug](https://github.com/once-ui-system/magic-portfolio/issues/new?labels=bug&template=bug_report.md).
-
-# **License**
-
-Distributed under the CC BY-NC 4.0 License.
-- Commercial usage is not allowed.
-- Attribution is required.
-
-See `LICENSE.txt` for more information.
-
-# **Deploy with Vercel**
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=https%3A%2F%2Fonce-ui.com%2Fimages%2Ftemplates%2Fmagic-portfolio%2Fcover.jpg)
+Made with ❤️ and code by Qendrim Beka
