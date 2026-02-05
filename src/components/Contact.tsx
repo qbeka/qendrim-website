@@ -1,12 +1,10 @@
 'use client';
 
-import { useTheme } from '@/contexts/ThemeContext';
-import { Mail, Calendar, Briefcase, Rocket } from 'lucide-react';
+import { Mail, Calendar, Briefcase, Rocket, Github, Linkedin, Heart } from 'lucide-react';
 import { useState } from 'react';
 import axios from 'axios';
 
 export default function Contact() {
-  const { theme } = useTheme();
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -50,7 +48,7 @@ export default function Contact() {
         }
       );
 
-      setSubmitStatus(theme === '8bit' ? '>>> MESSAGE SENT! <<<' : 'Message sent successfully!');
+      setSubmitStatus('Message sent successfully!');
       setEmail('');
       setMessage('');
     } catch (err: any) {
@@ -78,208 +76,190 @@ export default function Contact() {
   ];
 
   return (
-    <section
-      id="contact"
-      className={`py-24 px-6 lg:px-8 ${
-        theme === '8bit' ? 'bg-ink bit-8-bg' : 'bg-parchment'
-      }`}
-    >
-      <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
-        <div
-          className="text-center mb-16"
-        >
-          <div className={`inline-flex items-center space-x-2 mb-4 ${theme === '8bit' ? 'text-amber' : 'text-gold'}`}>
-            <div className="w-12 h-px bg-current"></div>
-            <div className="w-1 h-1 rounded-full bg-current"></div>
-            <div className="w-1 h-1 rounded-full bg-current"></div>
-            <div className="w-1 h-1 rounded-full bg-current"></div>
+    <>
+      <section id="contact" className="py-20 px-6 lg:px-8 bg-white">
+        <div className="max-w-5xl mx-auto">
+          {/* Section Header */}
+          <div className="mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-charcoal mb-3">
+              Get In Touch
+            </h2>
+            <div className="w-20 h-1 bg-burgundy"></div>
           </div>
-          <h2
-            className={`text-4xl md:text-5xl font-serif font-bold uppercase tracking-wider ${
-              theme === '8bit' ? 'text-amber bit-8-text' : 'text-burgundy'
-            }`}
-          >
-            {theme === '8bit' ? '// CONTACT //' : 'Get In Touch'}
-          </h2>
-          <div className={`w-24 h-1 mx-auto mt-4 ${theme === '8bit' ? 'bg-amber' : 'bg-burgundy'}`}></div>
-        </div>
 
-        {/* Work With Me Section */}
-        <div
-          className="mb-16"
-        >
-          <h3
-            className={`text-3xl font-serif font-bold text-center mb-8 ${
-              theme === '8bit' ? 'text-cream' : 'text-charcoal'
-            }`}
-          >
-            {theme === '8bit' ? '[ WORK WITH ME ]' : 'Work With Me'}
-          </h3>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {offerings.map((offering, index) => (
-              <div
-                key={index}
-                className={`p-8 rounded-lg text-center ${
-                  theme === '8bit'
-                    ? 'bg-charcoal border-4 border-amber bit-8-border'
-                    : 'bg-white shadow-xl'
-                }`}
-              >
-                <div className={`inline-block p-4 rounded-full mb-4 ${
-                  theme === '8bit' ? 'bg-burgundy' : 'bg-burgundy/10'
-                }`}>
-                  <offering.icon className={`w-10 h-10 ${theme === '8bit' ? 'text-amber' : 'text-burgundy'}`} />
-                </div>
-
-                <h4
-                  className={`text-xl font-serif font-bold mb-3 ${
-                    theme === '8bit' ? 'text-amber' : 'text-burgundy'
-                  }`}
-                >
-                  {offering.title}
-                </h4>
-
-                <p
-                  className={`font-serif mb-6 ${
-                    theme === '8bit' ? 'text-cream' : 'text-charcoal'
-                  }`}
-                >
-                  {offering.description}
-                </p>
-
-                <a
-                  href="https://calendly.com/beka-qendrim1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg uppercase tracking-wider font-semibold transition-all ${
-                    theme === '8bit'
-                      ? 'bg-amber text-ink hover:bg-gold bit-8-border'
-                      : 'bg-burgundy text-white hover:bg-leather'
-                  }`}
-                >
-                  <Calendar className="w-5 h-5" />
-                  {offering.cta}
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Contact Form */}
-        <div
-          className={`p-8 rounded-lg ${
-            theme === '8bit'
-              ? 'bg-charcoal border-4 border-amber bit-8-border'
-              : 'bg-white shadow-2xl'
-          }`}
-        >
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <Mail className={theme === '8bit' ? 'text-amber w-8 h-8' : 'text-burgundy w-8 h-8'} />
-            <h3
-              className={`text-2xl font-serif font-bold ${
-                theme === '8bit' ? 'text-amber' : 'text-burgundy'
-              }`}
-            >
-              {theme === '8bit' ? '[ SEND A MESSAGE ]' : 'Send a Message'}
+          {/* Work With Me Section */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-charcoal text-center mb-8">
+              Work With Me
             </h3>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {offerings.map((offering, index) => (
+                <div
+                  key={index}
+                  className="paper-card p-8 rounded-lg text-center"
+                >
+                  <div className="inline-flex p-4 rounded-full bg-burgundy/10 mb-4">
+                    <offering.icon className="w-10 h-10 text-burgundy" />
+                  </div>
+
+                  <h4 className="text-xl font-bold text-burgundy mb-3">
+                    {offering.title}
+                  </h4>
+
+                  <p className="text-charcoal mb-6">
+                    {offering.description}
+                  </p>
+
+                  <a
+                    href="https://calendly.com/beka-qendrim1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-burgundy text-white rounded-md font-semibold hover:bg-leather transition-colors btn-hover"
+                  >
+                    <Calendar className="w-5 h-5" />
+                    {offering.cta}
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label
-                htmlFor="email"
-                className={`block text-sm font-semibold mb-2 uppercase tracking-wide ${
-                  theme === '8bit' ? 'text-cream' : 'text-charcoal'
-                }`}
-              >
-                Email Address *
-              </label>
-              <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className={`w-full px-4 py-3 rounded-lg font-serif transition-all ${
-                  theme === '8bit'
-                    ? 'bg-ink border-2 border-amber text-cream focus:border-gold'
-                    : 'bg-cream border-2 border-stone/30 text-ink focus:border-burgundy'
-                } focus:outline-none`}
-                placeholder={theme === '8bit' ? '>>> YOUR_EMAIL@DOMAIN.COM' : 'your.email@example.com'}
-              />
+          {/* Contact Form */}
+          <div className="paper-card p-8 rounded-lg">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <Mail className="text-burgundy w-8 h-8" />
+              <h3 className="text-2xl font-bold text-burgundy">
+                Send a Message
+              </h3>
             </div>
 
-            <div>
-              <label
-                htmlFor="message"
-                className={`block text-sm font-semibold mb-2 uppercase tracking-wide ${
-                  theme === '8bit' ? 'text-cream' : 'text-charcoal'
-                }`}
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-semibold mb-2 text-charcoal"
+                >
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="w-full px-4 py-3 rounded-md border-2 border-charcoal/20 text-charcoal focus:border-burgundy focus:outline-none transition-colors"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-semibold mb-2 text-charcoal"
+                >
+                  Message (Optional)
+                </label>
+                <textarea
+                  id="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  rows={5}
+                  className="w-full px-4 py-3 rounded-md border-2 border-charcoal/20 text-charcoal focus:border-burgundy focus:outline-none resize-none transition-colors"
+                  placeholder="Tell me about your project or idea..."
+                />
+              </div>
+
+              {error && (
+                <div className="p-4 rounded-md bg-red-500/20 border-2 border-red-500 text-red-700 text-sm">
+                  {error}
+                </div>
+              )}
+
+              {submitStatus && (
+                <div className="p-4 rounded-md bg-green-500/20 border-2 border-green-500 text-green-700 text-sm">
+                  {submitStatus}
+                </div>
+              )}
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full px-8 py-4 bg-burgundy text-white rounded-md font-bold hover:bg-leather disabled:bg-stone/50 disabled:cursor-not-allowed transition-colors btn-hover"
               >
-                Message (Optional)
-              </label>
-              <textarea
-                id="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                rows={5}
-                className={`w-full px-4 py-3 rounded-lg font-serif resize-none transition-all ${
-                  theme === '8bit'
-                    ? 'bg-ink border-2 border-amber text-cream focus:border-gold'
-                    : 'bg-cream border-2 border-stone/30 text-ink focus:border-burgundy'
-                } focus:outline-none`}
-                placeholder={theme === '8bit' ? '>>> TYPE YOUR MESSAGE HERE...' : 'Tell me about your project or idea...'}
-              />
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+              </button>
+            </form>
+
+            <div className="mt-6 pt-6 border-t border-charcoal/10">
+              <p className="text-center text-sm text-charcoal">
+                Or reach out directly:{' '}
+                <a
+                  href="mailto:beka.qendrim1@gmail.com"
+                  className="font-semibold text-burgundy hover:text-leather"
+                >
+                  beka.qendrim1@gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 px-6 lg:px-8 bg-charcoal text-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="text-center md:text-left">
+              <p className="text-lg font-semibold mb-1">Qendrim Beka</p>
+              <p className="text-sm text-gray-400 mono">Competitor and Builder</p>
             </div>
 
-            {error && (
-              <div className="p-4 rounded-lg bg-red-500/20 border-2 border-red-500 text-red-500 text-sm">
-                {error}
-              </div>
-            )}
-
-            {submitStatus && (
-              <div className={`p-4 rounded-lg text-sm ${
-                theme === '8bit'
-                  ? 'bg-amber/20 border-2 border-amber text-amber'
-                  : 'bg-green-500/20 border-2 border-green-500 text-green-700'
-              }`}>
-                {submitStatus}
-              </div>
-            )}
-
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className={`w-full px-8 py-4 rounded-lg uppercase tracking-widest font-bold transition-all ${
-                theme === '8bit'
-                  ? 'bg-amber text-ink hover:bg-gold bit-8-border disabled:bg-stone'
-                  : 'bg-burgundy text-white hover:bg-leather disabled:bg-stone/50'
-              } disabled:cursor-not-allowed`}
-            >
-              {isSubmitting 
-                ? (theme === '8bit' ? '>>> SENDING... <<<' : 'Sending...')
-                : (theme === '8bit' ? '>>> SEND MESSAGE <<<' : 'Send Message')
-              }
-            </button>
-          </form>
-
-          <div className={`mt-6 pt-6 border-t ${theme === '8bit' ? 'border-amber/30' : 'border-stone/30'}`}>
-            <p className={`text-center text-sm ${theme === '8bit' ? 'text-cream' : 'text-charcoal'}`}>
-              Or reach out directly:{' '}
+            <div className="flex gap-4">
+              <a
+                href="https://github.com/qbeka"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-white/10 hover:bg-white/20 rounded-md transition-colors"
+                aria-label="GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/qendrimbeka/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-white/10 hover:bg-white/20 rounded-md transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
               <a
                 href="mailto:beka.qendrim1@gmail.com"
-                className={`font-semibold ${theme === '8bit' ? 'text-amber hover:text-gold' : 'text-burgundy hover:text-leather'}`}
+                className="p-3 bg-white/10 hover:bg-white/20 rounded-md transition-colors"
+                aria-label="Email"
               >
-                beka.qendrim1@gmail.com
+                <Mail className="w-5 h-5" />
               </a>
+              <a
+                href="https://calendly.com/beka-qendrim1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-white/10 hover:bg-white/20 rounded-md transition-colors"
+                aria-label="Schedule"
+              >
+                <Calendar className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-8 pt-8 border-t border-white/10 text-center">
+            <p className="text-sm text-gray-400 flex items-center justify-center gap-1">
+              Made with <Heart className="w-4 h-4 text-burgundy fill-burgundy" /> by Qendrim Beka © 2026
             </p>
           </div>
         </div>
-      </div>
-    </section>
+      </footer>
+    </>
   );
 }
-

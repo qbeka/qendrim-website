@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -13,154 +13,64 @@
 html,
 body {
   height: 100%;
-}
-
-/* Terminal mode - no scroll */
-html.terminal-mode,
-html.terminal-mode body {
-  overflow: hidden;
-}
-
-/* Portfolio mode - enable scroll */
-html.portfolio-mode,
-html.portfolio-mode body {
-  overflow-y: auto;
   overflow-x: hidden;
 }
 
 body {
-  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
-  background: #1e1e1e;
-  color: #d4d4d4;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f5f3ef;
+  color: #2c2c2c;
+  line-height: 1.6;
 }
 
-/* Terminal cursor blink */
-@keyframes blink {
-  0%, 50% {
-    opacity: 1;
-  }
-  51%, 100% {
-    opacity: 0;
-  }
+/* Notepad Paper Texture */
+.notepad-bg {
+  background: #f5f3ef;
+  background-image: 
+    linear-gradient(90deg, transparent 79px, #e8e3da 79px, #e8e3da 81px, transparent 81px),
+    linear-gradient(#f5f3ef 0.05em, transparent 0.05em);
+  background-size: 100% 1.5em;
 }
 
-.cursor-blink {
-  animation: blink 1s step-end infinite;
+/* Ruled Lines Effect */
+.ruled-lines {
+  background-image: 
+    repeating-linear-gradient(
+      transparent,
+      transparent 1.4rem,
+      #ddd8ce 1.4rem,
+      #ddd8ce 1.45rem
+    );
+}
+
+/* Monospace for specific elements */
+.mono {
+  font-family: 'IBM Plex Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #252526;
+  background: #e8e3da;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3e3e42;
-  border-radius: 5px;
+  background: #a39a8a;
+  border-radius: 6px;
+  border: 3px solid #e8e3da;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4e4e52;
+  background: #8a8170;
 }
 
 /* Text selection */
 ::selection {
-  background: #264f78;
-  color: #ffffff;
-}
-
-/* Nano/Vim editor styling */
-.editor-view {
-  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
-  white-space: pre-wrap;
-  line-height: 1.5;
-}
-
-.editor-status-bar {
-  background: #007acc;
-  color: #ffffff;
-  font-size: 12px;
-  padding: 4px 12px;
-}
-
-.editor-line-numbers {
-  color: #858585;
-  user-select: none;
-  text-align: right;
-  padding-right: 12px;
-  border-right: 1px solid #3e3e42;
-}
-
-/* 8-Bit Theme Styling */
-.bit-8 {
-  font-family: 'Press Start 2P', cursive !important;
-  image-rendering: pixelated;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: crisp-edges;
-}
-
-.bit-8 * {
-  font-family: 'Press Start 2P', cursive !important;
-}
-
-.bit-8-text {
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
-  letter-spacing: 0.05em;
-}
-
-.bit-8-small {
-  font-size: 0.6rem !important;
-  line-height: 2 !important;
-}
-
-.bit-8 h1 {
-  font-size: 2rem !important;
-  line-height: 1.5 !important;
-}
-
-.bit-8 h2 {
-  font-size: 1.5rem !important;
-  line-height: 1.6 !important;
-}
-
-.bit-8 h3 {
-  font-size: 1.2rem !important;
-  line-height: 1.6 !important;
-}
-
-.bit-8 h4 {
-  font-size: 0.9rem !important;
-  line-height: 1.6 !important;
-}
-
-.bit-8 p {
-  font-size: 0.65rem !important;
-  line-height: 2 !important;
-}
-
-.bit-8 button,
-.bit-8 a {
-  font-size: 0.6rem !important;
-}
-
-.bit-8-border {
-  border-style: solid;
-  border-width: 3px;
-  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
-}
-
-.bit-8-bg {
-  background: #0a0a0a;
-}
-
-.bit-8 img {
-  image-rendering: pixelated;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: crisp-edges;
-  filter: contrast(1.1) saturate(1.2);
+  background: #d4a574;
+  color: #2c2c2c;
 }
 
 /* Smooth scrolling for anchors */
@@ -170,6 +80,59 @@ html {
 
 /* Section padding to account for fixed nav */
 section[id] {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 100px;
+}
+
+/* Paper Card Style */
+.paper-card {
+  background: #ffffff;
+  border: 1px solid #e0ddd6;
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 2px 4px rgba(0, 0, 0, 0.04),
+    0 4px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Ink Underline Effect */
+.ink-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.ink-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  opacity: 0.3;
+}
+
+/* Button hover effects */
+.btn-hover {
+  transition: all 0.2s ease;
+}
+
+.btn-hover:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
 }
 

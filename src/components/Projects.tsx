@@ -1,6 +1,5 @@
 'use client';
 
-import { useTheme } from '@/contexts/ThemeContext';
 import { ExternalLink, Github } from 'lucide-react';
 import Image from 'next/image';
 
@@ -16,9 +15,15 @@ interface Project {
 }
 
 export default function Projects() {
-  const { theme } = useTheme();
-
   const projects: Project[] = [
+    {
+      title: 'Philo - A Thinking Journal',
+      date: 'October 2025',
+      summary: 'iOS mobile app with 25K+ users and $24K ARR. Philosophy-focused journaling with vector-based recommendation engine delivering personalized quote matches in <500ms.',
+      image: '/images/philo.jpg',
+      tags: ['React Native', 'TypeScript', 'Expo', 'RevenueCat', 'Vector Embeddings'],
+      demo: '',
+    },
     {
       title: 'NeuroNavScore: VR Alzheimer\'s Detection',
       date: 'November 2024',
@@ -61,67 +66,36 @@ export default function Projects() {
       tags: ['Python', 'OpenCV', 'MediaPipe', 'ML'],
       github: 'https://github.com/qbeka/rockpaperscissors',
     },
-    {
-      title: 'Matrix Calculator Study Tool',
-      date: 'March 2024',
-      summary: 'Console-based matrix calculator for academic learning, supporting REF, RREF, inverse operations, and system transformations. Built to reinforce linear algebra concepts.',
-      image: '/images/matrix.jpg',
-      tags: ['Python', 'Linear Algebra', 'Math'],
-      github: 'https://github.com/qbeka/Matrix-Calculator',
-    },
   ];
 
   return (
-    <section
-      id="projects"
-      className={`py-24 px-6 lg:px-8 ${
-        theme === '8bit' ? 'bg-ink bit-8-bg' : 'bg-parchment'
-      }`}
-    >
+    <section id="projects" className="py-20 px-6 lg:px-8 notepad-bg">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <div className={`inline-flex items-center space-x-2 mb-4 ${theme === '8bit' ? 'text-amber' : 'text-gold'}`}>
-            <div className="w-12 h-px bg-current"></div>
-            <div className="w-1 h-1 rounded-full bg-current"></div>
-            <div className="w-1 h-1 rounded-full bg-current"></div>
-            <div className="w-1 h-1 rounded-full bg-current"></div>
-          </div>
-          <h2
-            className={`text-4xl md:text-5xl font-serif font-bold uppercase tracking-wider ${
-              theme === '8bit' ? 'text-amber bit-8-text' : 'text-burgundy'
-            }`}
-          >
-            {theme === '8bit' ? '// PROJECTS //' : 'Projects'}
+        <div className="mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-charcoal mb-3">
+            Projects
           </h2>
-          <div className={`w-24 h-1 mx-auto mt-4 ${theme === '8bit' ? 'bg-amber' : 'bg-burgundy'}`}></div>
+          <div className="w-20 h-1 bg-burgundy"></div>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`rounded overflow-hidden ${
-                theme === '8bit'
-                  ? 'bg-charcoal border-4 border-amber bit-8-border'
-                  : 'bg-notepad shadow-md border border-burgundy/10'
-              }`}
+              className="paper-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
               {/* Project Image */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-48 overflow-hidden bg-gray-100">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className={`object-cover transition-transform duration-300 hover:scale-110 ${
-                    theme === '8bit' ? 'image-rendering: pixelated' : ''
-                  }`}
+                  className="object-cover transition-transform duration-300 hover:scale-105"
                 />
                 {project.award && (
-                  <div className={`absolute top-2 right-2 px-3 py-1 rounded-full text-xs font-semibold ${
-                    theme === '8bit' ? 'bg-amber text-ink' : 'bg-burgundy text-white'
-                  }`}>
+                  <div className="absolute top-3 right-3 px-3 py-1 bg-burgundy text-white rounded-md text-xs font-semibold">
                     {project.award}
                   </div>
                 )}
@@ -129,29 +103,14 @@ export default function Projects() {
 
               {/* Project Content */}
               <div className="p-6">
-                <div className="flex justify-between items-start mb-3">
-                  <h3
-                    className={`text-xl font-serif font-bold ${
-                      theme === '8bit' ? 'text-amber' : 'text-burgundy'
-                    }`}
-                  >
+                <div className="mb-3">
+                  <h3 className="text-lg font-bold text-burgundy mb-1">
                     {project.title}
                   </h3>
+                  <p className="text-xs text-stone mono">{project.date}</p>
                 </div>
 
-                <p
-                  className={`text-sm mb-3 ${
-                    theme === '8bit' ? 'text-amber/70' : 'text-stone'
-                  }`}
-                >
-                  {project.date}
-                </p>
-
-                <p
-                  className={`font-serif text-sm mb-4 line-clamp-3 ${
-                    theme === '8bit' ? 'text-cream' : 'text-charcoal'
-                  }`}
-                >
+                <p className="text-sm text-charcoal mb-4 line-clamp-3">
                   {project.summary}
                 </p>
 
@@ -160,42 +119,28 @@ export default function Projects() {
                   {project.tags.slice(0, 3).map((tag, i) => (
                     <span
                       key={i}
-                      className={`text-xs px-2 py-1 rounded ${
-                        theme === '8bit'
-                          ? 'bg-burgundy text-amber'
-                          : 'bg-cream text-burgundy'
-                      }`}
+                      className="text-xs px-2 py-1 bg-burgundy/10 text-burgundy rounded-md mono"
                     >
                       {tag}
                     </span>
                   ))}
                   {project.tags.length > 3 && (
-                    <span
-                      className={`text-xs px-2 py-1 rounded ${
-                        theme === '8bit'
-                          ? 'bg-burgundy text-amber'
-                          : 'bg-cream text-burgundy'
-                      }`}
-                    >
+                    <span className="text-xs px-2 py-1 bg-burgundy/10 text-burgundy rounded-md mono">
                       +{project.tags.length - 3}
                     </span>
                   )}
                 </div>
 
                 {/* Links */}
-                <div className="flex gap-3">
+                <div className="flex gap-2">
                   {project.github && (
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`flex items-center gap-2 px-4 py-2 rounded text-sm transition-colors ${
-                        theme === '8bit'
-                          ? 'bg-ink border-2 border-amber text-amber hover:bg-amber hover:text-ink'
-                          : 'bg-burgundy text-parchment hover:bg-leather'
-                      }`}
+                      className="flex items-center gap-1 px-3 py-2 bg-burgundy text-white rounded-md text-xs font-medium hover:bg-leather transition-colors btn-hover"
                     >
-                      <Github className="w-4 h-4" />
+                      <Github className="w-3.5 h-3.5" />
                       Code
                     </a>
                   )}
@@ -204,13 +149,9 @@ export default function Projects() {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`flex items-center gap-2 px-4 py-2 rounded text-sm transition-colors ${
-                        theme === '8bit'
-                          ? 'border-2 border-amber text-amber hover:bg-amber hover:text-ink'
-                          : 'border border-burgundy/40 text-burgundy hover:bg-burgundy hover:text-parchment'
-                      }`}
+                      className="flex items-center gap-1 px-3 py-2 border border-burgundy text-burgundy rounded-md text-xs font-medium hover:bg-burgundy hover:text-white transition-colors btn-hover"
                     >
-                      <ExternalLink className="w-4 h-4" />
+                      <ExternalLink className="w-3.5 h-3.5" />
                       Demo
                     </a>
                   )}
@@ -223,4 +164,3 @@ export default function Projects() {
     </section>
   );
 }
-

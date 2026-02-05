@@ -1,12 +1,21 @@
-'use client';
-
-import Terminal from '@/components/Terminal';
-import PortfolioView from '@/components/PortfolioView';
-import { useViewMode } from '@/contexts/ViewModeContext';
+import Navigation from '@/components/Navigation';
+import Hero from '@/components/Hero';
+import ExperienceSection from '@/components/ExperienceSection';
+import Projects from '@/components/Projects';
+import Involvement from '@/components/Involvement';
+import Testimonials from '@/components/Testimonials';
+import Contact from '@/components/Contact';
 
 export default function Home() {
-  const { viewMode } = useViewMode();
-
-  return viewMode === 'terminal' ? <Terminal /> : <PortfolioView />;
+  return (
+    <main>
+      <Navigation />
+      <Hero />
+      <ExperienceSection />
+      <Projects />
+      <Involvement />
+      <Testimonials />
+      <Contact />
+    </main>
+  );
 }
-

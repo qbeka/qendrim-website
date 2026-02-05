@@ -1,6 +1,5 @@
 'use client';
 
-import { useTheme } from '@/contexts/ThemeContext';
 import { Quote } from 'lucide-react';
 
 interface Testimonial {
@@ -12,8 +11,6 @@ interface Testimonial {
 }
 
 export default function Testimonials() {
-  const { theme } = useTheme();
-
   const testimonials: Testimonial[] = [
     {
       name: 'Mustafa Khan',
@@ -25,117 +22,63 @@ export default function Testimonials() {
   ];
 
   return (
-    <section
-      id="testimonials"
-      className={`py-24 px-6 lg:px-8 ${
-        theme === '8bit' ? 'bg-charcoal bit-8-bg' : 'bg-cream'
-      }`}
-    >
-      <div className="max-w-6xl mx-auto">
+    <section id="testimonials" className="py-20 px-6 lg:px-8 notepad-bg">
+      <div className="max-w-5xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <div className={`inline-flex items-center space-x-2 mb-4 ${theme === '8bit' ? 'text-amber' : 'text-gold'}`}>
-            <div className="w-12 h-px bg-current"></div>
-            <div className="w-1 h-1 rounded-full bg-current"></div>
-            <div className="w-1 h-1 rounded-full bg-current"></div>
-            <div className="w-1 h-1 rounded-full bg-current"></div>
-          </div>
-          <h2
-            className={`text-4xl md:text-5xl font-serif font-bold uppercase tracking-wider ${
-              theme === '8bit' ? 'text-amber bit-8-text' : 'text-burgundy'
-            }`}
-          >
-            {theme === '8bit' ? '// TESTIMONIALS //' : 'Testimonials'}
+        <div className="mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-charcoal mb-3">
+            Testimonials
           </h2>
-          <div className={`w-24 h-1 mx-auto mt-4 ${theme === '8bit' ? 'bg-amber' : 'bg-burgundy'}`}></div>
+          <div className="w-20 h-1 bg-burgundy"></div>
         </div>
 
         {/* Testimonials */}
-        <div className="grid md:grid-cols-1 gap-8">
+        <div className="space-y-6">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className={`p-8 rounded relative ${
-                theme === '8bit'
-                  ? 'bg-ink border-4 border-amber bit-8-border'
-                  : 'bg-notepad shadow-md border border-burgundy/10'
-              }`}
+              className="paper-card p-8 rounded-lg relative"
             >
               {/* Quote Icon */}
-              <div className={`absolute top-6 left-6 ${theme === '8bit' ? 'text-amber/30' : 'text-burgundy/20'}`}>
+              <div className="absolute top-6 left-6 text-burgundy/20">
                 <Quote className="w-12 h-12" />
               </div>
 
               {/* Content */}
-              <div className="relative z-10 pt-12">
-                <p
-                  className={`font-serif text-lg leading-relaxed mb-6 italic ${
-                    theme === '8bit' ? 'text-cream' : 'text-charcoal'
-                  }`}
-                >
+              <div className="relative z-10 pt-8">
+                <p className="text-lg text-charcoal leading-relaxed mb-6 italic">
                   "{testimonial.content}"
                 </p>
 
                 {/* Author Info */}
-                <div className={`border-t pt-6 ${theme === '8bit' ? 'border-amber/30' : 'border-burgundy/20'}`}>
-                  <h4
-                    className={`text-xl font-serif font-bold ${
-                      theme === '8bit' ? 'text-amber' : 'text-burgundy'
-                    }`}
-                  >
+                <div className="border-t border-charcoal/10 pt-6">
+                  <h4 className="text-xl font-bold text-burgundy">
                     {testimonial.name}
                   </h4>
-                  <p
-                    className={`text-sm ${
-                      theme === '8bit' ? 'text-cream' : 'text-charcoal'
-                    }`}
-                  >
+                  <p className="text-sm text-charcoal">
                     {testimonial.role} • {testimonial.company}
                   </p>
-                  <p
-                    className={`text-xs mt-1 ${
-                      theme === '8bit' ? 'text-amber/70' : 'text-stone'
-                    }`}
-                  >
+                  <p className="text-xs text-stone mono mt-1">
                     {testimonial.relation}
                   </p>
                 </div>
               </div>
-
-              {/* Decorative Corner (normal mode only) */}
-              {theme === 'normal' && (
-                <>
-                  <div className="absolute top-4 right-4 w-6 h-6 border-t-2 border-r-2 border-gold"></div>
-                  <div className="absolute bottom-4 left-4 w-6 h-6 border-b-2 border-l-2 border-gold"></div>
-                </>
-              )}
             </div>
           ))}
         </div>
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <p
-            className={`font-serif text-lg mb-6 ${
-              theme === '8bit' ? 'text-cream' : 'text-charcoal'
-            }`}
-          >
-            {theme === '8bit' ? '[ WORKED WITH QENDRIM? ]' : 'Worked with Qendrim?'}
+          <p className="text-lg text-charcoal mb-6">
+            Worked with Qendrim?
           </p>
           <a href="#contact">
-            <div
-              className={`inline-block px-8 py-4 rounded uppercase tracking-wider font-semibold transition-colors cursor-pointer ${
-                theme === '8bit'
-                  ? 'border-2 border-amber text-amber hover:bg-amber hover:text-ink bit-8-small'
-                  : 'border border-burgundy/40 text-burgundy hover:bg-burgundy hover:text-parchment'
-              }`}
-            >
-              {theme === '8bit' ? '>>> SHARE YOUR EXPERIENCE <<<' : 'Share Your Experience'}
-            </div>
+            <button className="px-8 py-3 border-2 border-burgundy text-burgundy rounded-md font-semibold hover:bg-burgundy hover:text-white transition-colors btn-hover">
+              Share Your Experience
+            </button>
           </a>
         </div>
       </div>
     </section>
   );
 }
-

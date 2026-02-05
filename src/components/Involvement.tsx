@@ -1,6 +1,5 @@
 'use client';
 
-import { useTheme } from '@/contexts/ThemeContext';
 import { Users, Trophy, Target, Zap } from 'lucide-react';
 
 interface InvolvementItem {
@@ -13,8 +12,6 @@ interface InvolvementItem {
 }
 
 export default function Involvement() {
-  const { theme } = useTheme();
-
   const involvements: InvolvementItem[] = [
     {
       icon: Users,
@@ -67,82 +64,41 @@ export default function Involvement() {
   ];
 
   return (
-    <section
-      id="involvement"
-      className={`py-24 px-6 lg:px-8 ${
-        theme === '8bit' ? 'bg-charcoal bit-8-bg' : 'bg-cream'
-      }`}
-    >
+    <section id="involvement" className="py-20 px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div
-          className="text-center mb-16"
-        >
-          <div className={`inline-flex items-center space-x-2 mb-4 ${theme === '8bit' ? 'text-amber' : 'text-gold'}`}>
-            <div className="w-12 h-px bg-current"></div>
-            <div className="w-1 h-1 rounded-full bg-current"></div>
-            <div className="w-1 h-1 rounded-full bg-current"></div>
-            <div className="w-1 h-1 rounded-full bg-current"></div>
-          </div>
-          <h2
-            className={`text-4xl md:text-5xl font-serif font-bold uppercase tracking-wider ${
-              theme === '8bit' ? 'text-amber bit-8-text' : 'text-burgundy'
-            }`}
-          >
-            {theme === '8bit' ? '// INVOLVEMENT //' : 'Involvement'}
+        <div className="mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-charcoal mb-3">
+            Involvement
           </h2>
-          <div className={`w-24 h-1 mx-auto mt-4 ${theme === '8bit' ? 'bg-amber' : 'bg-burgundy'}`}></div>
+          <div className="w-20 h-1 bg-burgundy"></div>
         </div>
 
         {/* Involvements Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6">
           {involvements.map((item, index) => (
             <div
               key={index}
-              className={`p-6 rounded-lg ${
-                theme === '8bit'
-                  ? 'bg-ink border-4 border-amber bit-8-border'
-                  : 'bg-cream shadow-xl border-l-4 border-burgundy'
-              }`}
+              className="paper-card p-6 rounded-lg border-l-4 border-burgundy"
             >
               {/* Icon */}
-              <div className={`inline-block p-3 rounded-lg mb-4 ${
-                theme === '8bit' ? 'bg-burgundy' : 'bg-burgundy/10'
-              }`}>
-                <item.icon className={`w-8 h-8 ${theme === '8bit' ? 'text-amber' : 'text-burgundy'}`} />
+              <div className="inline-flex p-3 rounded-lg bg-burgundy/10 mb-4">
+                <item.icon className="w-7 h-7 text-burgundy" />
               </div>
 
               {/* Header */}
               <div className="mb-4">
-                <h3
-                  className={`text-xl font-serif font-bold mb-1 ${
-                    theme === '8bit' ? 'text-amber' : 'text-burgundy'
-                  }`}
-                >
+                <h3 className="text-xl font-bold text-burgundy mb-1">
                   {item.title}
                 </h3>
-                <p
-                  className={`text-sm font-semibold ${
-                    theme === '8bit' ? 'text-cream' : 'text-charcoal'
-                  }`}
-                >
+                <p className="text-base font-semibold text-charcoal">
                   {item.organization}
                 </p>
-                <p
-                  className={`text-xs mt-1 ${
-                    theme === '8bit' ? 'text-amber/70' : 'text-stone'
-                  }`}
-                >
-                  {item.period}
-                </p>
+                <p className="text-xs text-stone mono mt-1">{item.period}</p>
               </div>
 
               {/* Description */}
-              <p
-                className={`font-serif text-sm leading-relaxed mb-4 ${
-                  theme === '8bit' ? 'text-cream' : 'text-charcoal'
-                }`}
-              >
+              <p className="text-sm text-charcoal leading-relaxed mb-4">
                 {item.description}
               </p>
 
@@ -151,14 +107,10 @@ export default function Involvement() {
                 {item.highlights.map((highlight, i) => (
                   <li
                     key={i}
-                    className={`flex items-start gap-2 text-sm ${
-                      theme === '8bit' ? 'text-cream' : 'text-charcoal'
-                    }`}
+                    className="flex items-start gap-2 text-sm text-charcoal"
                   >
-                    <span className={theme === '8bit' ? 'text-amber' : 'text-burgundy'}>
-                      {theme === '8bit' ? '>' : '•'}
-                    </span>
-                    {highlight}
+                    <span className="text-burgundy mt-1">•</span>
+                    <span>{highlight}</span>
                   </li>
                 ))}
               </ul>
@@ -167,30 +119,17 @@ export default function Involvement() {
         </div>
 
         {/* Call to Action */}
-        <div
-          className="text-center mt-16"
-        >
-          <p
-            className={`font-serif text-lg mb-6 ${
-              theme === '8bit' ? 'text-cream' : 'text-charcoal'
-            }`}
-          >
-            {theme === '8bit' ? '[ INTERESTED IN COLLABORATING? ]' : 'Interested in collaborating?'}
+        <div className="text-center mt-12">
+          <p className="text-lg text-charcoal mb-6">
+            Interested in collaborating?
           </p>
           <a href="#contact">
-            <div
-              className={`inline-block px-8 py-4 rounded-lg uppercase tracking-wider font-semibold transition-all cursor-pointer ${
-                theme === '8bit'
-                  ? 'bg-amber text-ink hover:bg-gold bit-8-border bit-8-small'
-                  : 'bg-burgundy text-white hover:bg-leather'
-              }`}
-            >
-              {theme === '8bit' ? '>>> LET\'S CONNECT <<<' : 'Let\'s Connect'}
-            </div>
+            <button className="px-8 py-3 bg-burgundy text-white rounded-md font-semibold hover:bg-leather transition-colors btn-hover">
+              Let's Connect
+            </button>
           </a>
         </div>
       </div>
     </section>
   );
 }
-
