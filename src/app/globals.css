@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,129 +8,20 @@
   margin: 0;
 }
 
-html,
 body {
-  height: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: #f5f3ef;
-  color: #2c2c2c;
-  line-height: 1.6;
-}
-
-/* Notepad Paper Texture */
-.notepad-bg {
-  background: #f5f3ef;
-  background-image: 
-    linear-gradient(90deg, transparent 79px, #e8e3da 79px, #e8e3da 81px, transparent 81px),
-    linear-gradient(#f5f3ef 0.05em, transparent 0.05em);
-  background-size: 100% 1.5em;
-}
-
-/* Ruled Lines Effect */
-.ruled-lines {
-  background-image: 
-    repeating-linear-gradient(
-      transparent,
-      transparent 1.4rem,
-      #ddd8ce 1.4rem,
-      #ddd8ce 1.45rem
-    );
-}
-
-/* Monospace for specific elements */
-.mono {
-  font-family: 'IBM Plex Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
-}
-
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: #e8e3da;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #a39a8a;
-  border-radius: 6px;
-  border: 3px solid #e8e3da;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #8a8170;
-}
-
-/* Text selection */
-::selection {
-  background: #d4a574;
-  color: #2c2c2c;
-}
-
-/* Smooth scrolling for anchors */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Section padding to account for fixed nav */
-section[id] {
-  scroll-margin-top: 100px;
-}
-
-/* Paper Card Style */
-.paper-card {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
   background: #ffffff;
-  border: 1px solid #e0ddd6;
-  box-shadow: 
-    0 1px 2px rgba(0, 0, 0, 0.04),
-    0 2px 4px rgba(0, 0, 0, 0.04),
-    0 4px 8px rgba(0, 0, 0, 0.04);
+  color: #37352f;
+  line-height: 1.5;
+  font-size: 16px;
 }
 
-/* Ink Underline Effect */
-.ink-underline {
-  position: relative;
-  display: inline-block;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.ink-underline::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background: currentColor;
-  opacity: 0.3;
-}
-
-/* Button hover effects */
-.btn-hover {
-  transition: all 0.2s ease;
-}
-
-.btn-hover:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Fade in animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
+a:hover {
+  text-decoration: underline;
 }
 
